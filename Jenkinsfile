@@ -15,7 +15,7 @@ pipeline {
 
     stage('Deploy Container To Openshift') {
       steps {
-        sh "oc login https://localhost:8501 --username admin --password admin --insecure-skip-tls-verify=true"
+        sh "oc login https://localhost:8080 --username admin --password admin --insecure-skip-tls-verify=true"
         sh "oc project ${projectName} || oc new-project ${projectName}"
         
         sh "oc delete all --selector app=${projectName} || echo 'Unable to delete all previous openshift resources'"
