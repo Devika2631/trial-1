@@ -1,6 +1,6 @@
 
 
-def projectName = 'Final-Hackathon'
+def projectName = 'final-hackathon'
 def version = "0.0.${currentBuild.number}"
 def dockerImageTag = "${projectName}:${version}"
 
